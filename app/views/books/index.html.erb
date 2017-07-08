@@ -1,0 +1,8 @@
+	<div class="col-xs-6 col-md-4">
+		<h3 class="glyphicon glyphicon-list-alt"> Все книги</h3>
+			<% @books.each do |book| %>
+				<h6><%= link_to book.title, book_path(book) %></h6>
+				<h6><%= book.desc %></h6>
+			<% end %>
+		<a><%= will_paginate @books, :previous_label => t("Назад"), :next_label => t("Следующая") %></a>
+	</div>

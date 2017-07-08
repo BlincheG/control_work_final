@@ -1,0 +1,13 @@
+<%= simple_form_for @author do |f| %>
+
+      <%= f.input :name, label: "Название автора", required: true %>
+
+    <div>
+      <%= f.label "Описание" %>
+      <%= f.text_area :description, required: true  %>
+    </div>
+
+    <div>
+      <%= f.submit "Создать автора" %>
+    </div>
+<% end %>

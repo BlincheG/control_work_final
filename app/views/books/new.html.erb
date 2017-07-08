@@ -1,0 +1,17 @@
+<%= simple_form_for @book do |f| %>
+
+      <%= f.input :title, label: "Название книги", required: true %>
+
+    <div>
+      <%= f.label "Описание" %>
+      <%= f.text_area :desc, required: true  %>
+    </div>
+
+    <%= f.association :authors, as: :select, required: true %>
+    <%= f.input :categories, collection: @categories, as: :select, required: true %>
+
+
+    <div>
+      <%= f.submit "Создать книгу" %>
+    </div>
+<% end %>

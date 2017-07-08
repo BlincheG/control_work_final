@@ -1,0 +1,12 @@
+<h1><%= @book.title %></h1>
+<h2><%= @book.desc %></h2>
+
+<h2><%= link_to 'Comments', '#', id: 'comments-link' %></h2>
+<div id="comment-section">
+  <ol id="comments">
+    <%= render @book.comments %>
+  </ol>
+
+  <h3>Add a comment:</h3>
+  <%= render 'comments/form' %>
+</div>

@@ -1,0 +1,10 @@
+<%= form_for [@book, @book.comments.build] do |f| %>
+    <div>
+      Text: <%= f.text_area :title %>
+    </div>
+    <div>
+    	Score: <%= f.select :rating, [1, 2, 3, 4, 5] %>
+    </div>
+
+    <%= f.submit %>
+<% end %>
